@@ -1,0 +1,15 @@
+<div *ngIf="card">
+    <h2>{{cardText | uppercase}} Details</h2>
+    <div>id: {{card.id}}</div>
+    <div>
+        <label for="card-text">Card Text: </label>
+        <ul class="cards" *ngFor="let word of card.text">
+            <li>
+                <input class="text" id="card-text" [(ngModel)]="word.v" placedholder="text">
+                <button class="notFlagged" [class.flagged]="word.flagged" id="card-text-flagged" [(ngModel)]="word.flagged"></button>
+            </li>
+        </ul>
+        <input id="new-word" [(ngModel)]="newWord">
+        <button id="add-new-word" (click)="addNewWord()">Add word</button>
+    </div>
+</div>

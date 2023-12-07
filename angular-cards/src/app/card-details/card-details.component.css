@@ -1,0 +1,24 @@
+.card-details {
+    margin: 0 0 2em 0;
+    list-style-type: none;
+    padding: 0;
+    width: 15em;
+  }
+  
+  .cards li {
+    display: flex;
+  }
+  
+  .card-details .flagged {
+    font-size: xx-small;
+    background-color: rgb(100, 180, 63);
+  }
+  
+  .card-details .notFlagged {
+    font-size: xx-small;
+    background-color: rgb(211, 20, 20);
+  }
+  
+  .card-details .text {
+    align-self: center;
+  }

@@ -1,0 +1,11 @@
+<h2>My Cards</h2>
+<ul class="cards">
+    <li *ngFor="let card of cards">
+        <button type="button" (click)="onSelect(card)" [class.selected]="card === selectedCard">
+            <span class="id">{{card.id}}</span>
+            <span class="text">{{getCardText(card)}}</span>
+        </button>
+    </li>
+</ul>
+
+<app-card-details [card]="selectedCard"></app-card-details>
